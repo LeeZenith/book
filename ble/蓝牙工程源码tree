@@ -1,0 +1,37 @@
+├─board																	--> 开发板外设驱动
+│  ├─stm32f10x													--> STM32 F103的外设驱动
+│  │  └─usb_mass_storage								--> STM32 F103的USB device驱动
+│  └─stm32f40x													--> STM32 F40X的外设驱动（暂未实现）
+├─bsp																		--> 开发板驱动库
+│  ├─cortex-m3													--> Cortex M3的外设库（用的标准库）
+│  │  ├─core
+│  │  ├─inc
+│  │  ├─src
+│  │  └─STM32_USB-FS-Device_Driver
+│  │      ├─inc
+│  │      └─src
+│  └─cortex-m4													--> Cortex M4的外设库（暂未实现）
+│      ├─core
+│      ├─inc
+│      └─src
+├─component															--> 开发板组件
+│  ├─bluetooth													--> 蓝牙协议栈组件
+│  │  ├─src															--> 蓝牙协议栈源码
+│  │  │  ├─core													
+│  │  │  │  ├─ble												--> BLE蓝牙源码
+│  │  │  │  └─classical									--> 传统蓝牙源码
+│  │  │  └─include
+│  │  │      ├─ble											--> BLE蓝牙头文件
+│  │  │      └─classical								--> 传统蓝牙头文件
+│  │  ├─third_party_lib									--> 蓝牙用到的3方库
+│  │  │  └─sbc													--> SBC编解码算法
+│  │  └─vendor													--> 蓝牙vendor command or fw bin
+│  └─ringbuffer													--> Rinfbuffer实现
+└─project
+    ├─stm32f10x_bb_csr8x11_bt						--> STM32F103蓝牙工程
+    │  ├─Listings
+    │  ├─Objects
+    │  └─SI
+    ├─stm32f4xx_bb_csr8x11_bt						--> STM32F4蓝牙工程（咱未实现）
+    └─ubuntu_csr8x11_bt									--> Linux ubuntu蓝牙工程
+        └─SI
