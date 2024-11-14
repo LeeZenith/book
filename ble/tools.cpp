@@ -3,6 +3,7 @@
 #include <sstream>
 #include <iostream>
 #include <algorithm> // 用于std::remove_if
+#include <iomanip>
 
 std::vector<int> splitStringToIntVector(const std::string& str) {
     std::vector<int> result;
@@ -76,6 +77,11 @@ std::string concatenateToString(Args... args) {
         result.pop_back();
     }
     return result;
+}
+
+void print_with_precision(double value, int n) {
+    // 设置输出流，保留n位小数
+    std::cout << std::fixed << std::setprecision(n) << value << std::endl;
 }
 
 int main() {
